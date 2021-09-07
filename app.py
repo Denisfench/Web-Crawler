@@ -9,10 +9,24 @@ from googlesearch import search
 query = input("Please enter a search query ")
 seed = search(query, stop=10)
 urls = PriorityQueue()
-urls.put((1, "https://en.wikipedia.org/wiki/Alan_Turing"))
 
 for webpage in seed:
-    print(webpage)
+    urls.put((1, webpage))
+
+# get the page ans scrape the data
+data = []
+# print("The first url is", urls.get()[1])
+# might be getting stuck if the page doesn't respond 
+for url in urls.queue:
+    try:
+        response = requests.get(url[1])
+    except:
+        pass
+    if response.status_code == 200:
+        print(response.headers)
+        html_doc = response.text
+        soup = BeautifulSoup(html_doc, 'html.parser')
+        data.append(list((url, len(response.content), soup)))
 
 # ignore SSL certificate errors
 ctx = ssl.create_default_context()
