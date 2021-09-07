@@ -16,27 +16,39 @@ for webpage in seed:
 # get the page ans scrape the data
 data = []
 # print("The first url is", urls.get()[1])
-# might be getting stuck if the page doesn't respond 
+# might be getting stuck if the page doesn't respond
 for url in urls.queue:
     try:
         response = requests.get(url[1])
     except:
         pass
     if response.status_code == 200:
-        print(response.headers)
+        # print(response.headers)
         html_doc = response.text
         soup = BeautifulSoup(html_doc, 'html.parser')
-        data.append(list((url, len(response.content), soup)))
+        data.append(list((url, len(response.content), url[0], soup)))
+
+# scrape the pages for the links to other pages
+for page in data:
+    # urls.put(page[3].find_all('a').get('href'))
+    for url_link in page[3].find_all('a', href=True):
+        # print(type(url_link['href']))
+        urls.put(tuple((1, url_link['href'])))
+
+# print("The urls are", urls)
+
+while urls:
+    print(urls.get())
 
 # ignore SSL certificate errors
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-html = urllib.request.urlopen("https://en.wikipedia.org/wiki/Alan_Turing", context=ctx).read()
-soup = BeautifulSoup(html, 'html.parser')
+# html = urllib.request.urlopen("https://en.wikipedia.org/wiki/Alan_Turing", context=ctx).read()
+# soup = BeautifulSoup(html, 'html.parser')
 
-tags = soup('a')
+# tags = soup('a')
 # for tag in tags:
 #     # print(tag.get('href', None))
 
