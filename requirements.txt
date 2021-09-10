@@ -1,3 +1,5 @@
 beautifulsoup4
 google 
 requests
+url-normalize
+urllib.parse

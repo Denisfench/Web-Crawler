@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from queue import PriorityQueue
 from googlesearch import search
+from urllib.parse import urljoin
 
 # obtaining a seed set of pages from Google based on query 
 query = input("Please enter a search query ")
@@ -30,15 +31,22 @@ for url in urls.queue:
 
 # scrape the pages for the links to other pages
 for page in data:
+    # get the base url for the page
+    base_url = page[3].find('base')
     # urls.put(page[3].find_all('a').get('href'))
     for url_link in page[3].find_all('a', href=True):
         # print(type(url_link['href']))
+        if base_url is not None:
+            if 'http://' or 'https://' not in url_link['href']:
+                urljoin(base_url, url_link['href'])
         urls.put(tuple((1, url_link['href'])))
 
 # print("The urls are", urls)
 
-while urls:
-    print(urls.get())
+
+def print_urls():
+    while not urls.empty():
+        print(urls.get())
 
 # ignore SSL certificate errors
 ctx = ssl.create_default_context()
