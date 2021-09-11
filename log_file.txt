@@ -1,0 +1,1282 @@
+url # 1
+url https://en.wikipedia.org/wiki/Ancient_Rome
+rank of visited url 0.25
+visited at 1631402392.6976252url # 2
+url https://en.wikipedia.org/wiki/Ancient_Rome#Empire_%E2%80%93_the_Principate
+rank of visited url 0.00015513496742165683
+visited at 1631402395.1986291url # 3
+url https://en.wikipedia.org/wiki/Ancient_Rome#Founding_myth
+rank of visited url 7.759155803848541e-05
+visited at 1631402398.459472url # 4
+url https://en.wikipedia.org/wiki/Ancient_Rome#Late_Republic
+rank of visited url 5.173305742369374e-05
+visited at 1631402402.133615url # 5
+url https://en.wikipedia.org/wiki/Ancient_Rome#Republic
+rank of visited url 3.8801800403538726e-05
+visited at 1631402404.854731url # 6
+url https://en.wikipedia.org/wiki/Climate_of_Rome
+rank of visited url 3.1042403923759856e-05
+visited at 1631402407.951261url # 7
+url https://en.wikipedia.org/wiki/Elections_in_Rome
+rank of visited url 3.08641975308642e-05
+visited at 1631402408.2562618url # 8
+url https://en.wikipedia.org/wiki/History_of_Rome
+rank of visited url 3.069179301454791e-05
+visited at 1631402408.810286url # 9
+url https://en.wikipedia.org/wiki/Rome
+rank of visited url 2.7986118885033023e-05
+visited at 1631402410.767693url # 10
+url https://en.wikipedia.org/wiki/Sack_of_Rome_(410)
+rank of visited url 2.5998336106489185e-05
+visited at 1631402413.777232url # 11
+url http://ancienthistory.about.com/cs/grecoromanmyth1/a/mythslegends_3.htm
+rank of visited url 0.015625
+visited at 1631402414.200205url # 12
+url http://ancientrome.ru/art/artworken/index.htm?id=52
+rank of visited url 0.018518518518518517
+visited at 1631402414.923506url # 13
+url http://archive.wikiwix.com/cache/20110224124311/https:/whc.unesco.org/en/list/91
+rank of visited url 0.125
+visited at 1631402415.925869url # 14
+url http://bootheprize.stanford.edu/0708/IHUM-Krimkevich.pdf
+rank of visited url 0.08333333333333333
+visited at 1631402419.6418839url # 15
+url http://catalog.hathitrust.org/api/volumes/oclc/1538646.html
+rank of visited url 0.125
+visited at 1631402419.8651001url # 16
+url http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display&authority_id=XX450599
+rank of visited url 0.05555555555555555
+visited at 1631402422.789686url # 19
+url http://climaintoscana.altervista.org/italia/stazioni-wmo/roma-ciampino/
+rank of visited url 0.08333333333333333
+visited at 1631402427.462229url # 20
+url http://climatebase.ru/station/16239/from2000/?lang=en
+rank of visited url 0.125
+visited at 1631402429.1396081url # 21
+url http://comandosupremo.com/mussolini.html
+rank of visited url 0.125
+visited at 1631402432.683243url # 22
+url http://content.time.com/time/magazine/article/0,9171,874209,00.html
+rank of visited url 0.125
+visited at 1631402434.9800372url # 24
+url http://dati.istat.it/Index.aspx?DataSetCode=DCIS_POPRES1
+rank of visited url 0.16666666666666666
+visited at 1631402435.891835url # 25
+url http://datos.bne.es/resource/XX450599
+rank of visited url 0.125
+visited at 1631402436.878691url # 26
+url http://del.icio.us/post?notes=According%20to%20the%20historians%20of%20antiquity,%20Rome%20was%20founded%20by%20the%20%0Abrothers%20Romulus%20and%20Remus%20as%20a%20hangout%20for%20the%20delinquent%20youth%20of%20%0Aearly%20Iron%20Age%20Latium,%20and%20was%20given%20permanence%20by%20the%20rape%20of...&title=Science:%20Rome:%20Older%20Than%20Ever&url=http://content.time.com/time/magazine/article/0,9171,874209,00.html
+rank of visited url 0.16666666666666666
+visited at 1631402438.97578url # 27
+url http://demo.istat.it/bil2007/index.html
+rank of visited url 0.1
+visited at 1631402442.1219132url # 28
+url http://digg.com/submit?url=http://content.time.com/time/magazine/article/0,9171,874209,00.html
+rank of visited url 0.16666666666666666
+visited at 1631402443.169386url # 29
+url http://digitalcommons.law.uga.edu/cgi/viewcontent.cgi?article=1045&context=fac_pm
+rank of visited url 0.07142857142857142
+visited at 1631402444.4264529url # 30
+url http://digitalcommons.unl.edu/classicsfacpub/1/
+rank of visited url 0.041666666666666664
+visited at 1631402447.563458url # 31
+url http://edition.cnn.com/2008/SPORT/football/10/22/first11.derbies/index.html
+rank of visited url 0.16666666666666666
+visited at 1631402449.487243url # 35
+url http://encyclopedia2.thefreedictionary.com/Alaric,+King+of+the+Visigoths
+rank of visited url 0.125
+visited at 1631402453.231528url # 41
+url http://fathom.lib.uchicago.edu/1/777777121908/
+rank of visited url 0.011904761904761904
+visited at 1631402540.722755url # 42
+url http://feeds.feedburner.com/TheHistoryOfRome
+rank of visited url 0.05555555555555555
+visited at 1631402541.752374url # 43
+url http://geodata.lib.ncsu.edu/fedgov/noaa/clino/TABLES/REG_VI/IY/16235.TXT
+rank of visited url 0.07142857142857142
+visited at 1631402542.581043url # 44
+url http://geography.about.com/od/historyofgeography/a/grandtour.htm
+rank of visited url 0.16666666666666666
+visited at 1631402543.8366458url # 45
+url http://history.boisestate.edu/westciv/empire/15.shtml
+rank of visited url 0.029411764705882353
+visited at 1631402544.461226url # 46
+url http://historystack.posterous.com/455-sack-of-rome
+rank of visited url 0.125
+visited at 1631402548.1124249url # 47
+url http://id.worldcat.org/fast/1204885/
+rank of visited url 0.05555555555555555
+visited at 1631402548.586116url # 48
+url http://it.wordpress.com/
+rank of visited url 0.16666666666666666
+visited at 1631402549.0818url # 49
+url http://koeppen-geiger.vu-wien.ac.at/
+rank of visited url 0.08333333333333333
+visited at 1631402550.395435url # 50
+url http://iissrv1.vu-wien.ac.at/i136/RUBEL/news.htm
+rank of visited url 0.125
+visited at 1631402553.275407url # 51
+url http://epidemic-modeling.vetmeduni.ac.at/
+rank of visited url 0.16666666666666666
+visited at 1631402554.324197url # 52
+url http://labs.time.com/
+rank of visited url 0.16666666666666666
+visited at 1631402555.8978078url # 53
+url http://libpub.unl.edu/guide_on_the_side/tutorial/digital-commons
+rank of visited url 0.16666666666666666
+visited at 1631402557.164074url # 54
+url http://libraries.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402558.522639url # 55
+url http://cdrh.unl.edu/
+rank of visited url 0.0625
+visited at 1631402559.2088032url # 56
+url http://cather.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402559.9236171url # 57
+url http://earlywashingtondc.org/
+rank of visited url 0.16666666666666666
+visited at 1631402561.170965url # 58
+url http://libanswers.unl.edu/faq/145419
+rank of visited url 0.05
+visited at 1631402562.871656url # 59
+url http://library.thinkquest.org/26602/entertainment.htm#leisure
+rank of visited url 0.041666666666666664
+visited at 1631402563.97552url # 60
+url http://media.johnwiley.com.au/product_data/excerpt/14/14443392/1444339214.pdf
+rank of visited url 0.16666666666666666
+visited at 1631402569.559627url # 61
+url http://metalab.unc.edu/pha/policy/1941/410223a.html
+rank of visited url 0.08333333333333333
+visited at 1631402570.773134url # 62
+url http://meteoteamitalia.altervista.org/
+rank of visited url 0.16666666666666666
+visited at 1631402571.6751769url # 63
+url http://mith.umd.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402572.253946url # 64
+url http://mixx.com/submit?title=Science:%20Rome:%20Older%20Than%20Ever&url=http://content.time.com/time/magazine/article/0,9171,874209,00.html
+rank of visited url 0.16666666666666666
+visited at 1631402573.042876url # 65
+url http://nebnewspapers.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402573.779861url # 66
+url http://neihardt.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402574.559299url # 67
+url http://news.bbc.co.uk/2/hi/health/4381924.stm
+rank of visited url 0.021739130434782608
+visited at 1631402574.780155url # 69
+url http://oe1.orf.at/programm/285438
+rank of visited url 0.16666666666666666
+visited at 1631402575.704552url # 70
+url http://musikprotokoll.orf.at/
+rank of visited url 0.07142857142857142
+visited at 1631402578.183789url # 71
+url http://parking.unl.edu/maps
+rank of visited url 0.1
+visited at 1631402579.244422url # 72
+url http://downtownlincoln.org/
+rank of visited url 0.16666666666666666
+visited at 1631402579.891268url # 73
+url http://parkandgo.org/
+rank of visited url 0.16666666666666666
+visited at 1631402580.821409url # 74
+url http://people.ucalgary.ca/~vandersp/Courses/texts/lactant/lactpers.html#VII
+rank of visited url 0.015625
+visited at 1631402581.860322url # 78
+url http://reddit.com/submit?title=Science:%20Rome:%20Older%20Than%20Ever&url=http://content.time.com/time/magazine/article/0,9171,874209,00.html
+rank of visited url 0.16666666666666666
+visited at 1631402584.3607051url # 79
+url http://romandnaproject.org/
+rank of visited url 0.029411764705882353
+visited at 1631402586.215075url # 80
+url http://killgrove.org/research/past/
+rank of visited url 0.16666666666666666
+visited at 1631402586.785206url # 81
+url http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147585
+rank of visited url 0.16666666666666666
+visited at 1631402588.051198url # 82
+url http://anthropology.unc.edu/
+rank of visited url 0.007352941176470588
+visited at 1631402589.865833url # 83
+url http://college.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402591.239351url # 84
+url http://admissions.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402592.659651url # 85
+url http://casbo.web.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402592.805013url # 86
+url http://catalog.unc.edu/undergraduate/programs-study/
+rank of visited url 0.125
+visited at 1631402594.701625url # 87
+url http://curricula.unc.edu/faculty/directors-of-undergraduate-studies/
+rank of visited url 0.125
+visited at 1631402596.027863url # 88
+url http://dx.doi.org/10.6084/m9.figshare.1468571
+rank of visited url 0.125
+visited at 1631402597.237946url # 89
+url http://global.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402598.302778url # 90
+url http://gradschool.unc.edu/
+rank of visited url 0.1
+visited at 1631402599.556803url # 91
+url http://gradfunding.web.unc.edu/
+rank of visited url 0.0625
+visited at 1631402600.39636url # 92
+url http://isss.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402601.0977888url # 93
+url http://magazine.college.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402602.515109url # 94
+url http://oasis.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402604.3813179url # 95
+url http://rome-hotels.tripadvisor.com/Tourism-g187791-Rome_Lazio-Vacations.html
+rank of visited url 0.08333333333333333
+visited at 1631402607.5914161url # 96
+url http://sas.web.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402607.941765url # 97
+url http://help.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402612.490458url # 100
+url http://shelleygodwinarchive.org/
+rank of visited url 0.125
+visited at 1631402615.601883url # 101
+url http://hcl.harvard.edu/libraries/houghton/
+rank of visited url 0.16666666666666666
+visited at 1631402616.429228url # 102
+url http://subscription-assets.time.com/prod/assets/themes/magazines/SUBS/templates/velocity/site/td-learnmore1111/lp.html
+rank of visited url 0.125
+visited at 1631402692.578741url # 103
+url http://subscription-assets.timeinc.com/prod/assets/themes/magazines/default/template-resources/html/legal/ti-corp-behavioral.html
+rank of visited url 0.1
+visited at 1631402692.67267url # 104
+url http://surveys.plos.org/s3/reprints
+rank of visited url 0.16666666666666666
+visited at 1631402692.720546url # 105
+url http://time.com/
+rank of visited url 0.007575757575757576
+visited at 1631402693.369119url # 106
+url http://timemagazine.tumblr.com/
+rank of visited url 0.16666666666666666
+visited at 1631402693.603571url # 107
+url http://tinyurl.com/pw6hvha
+rank of visited url 0.16666666666666666
+visited at 1631402695.6547148url # 108
+url http://toolserver.org/~geohack/geohack.php?pagename=Rome_Ciampino_Airport&params=41_47_58_N_012_35_50_E_type:airport_region:IT&title=Rome+Ciampino+Airport
+rank of visited url 0.0007002801120448179
+visited at 1631402696.848804url # 109
+url http://maps.vlasenko.net/?lat=41.799444&lon=12.597222
+rank of visited url 0.16666666666666666
+visited at 1631402699.2066839url # 110
+url http://geotargeting.com.ua/
+rank of visited url 0.16666666666666666
+visited at 1631402701.85425url # 111
+url http://maps.yandex.com/?l=map&ll=12.597222,41.799444&pt=12.597222,41.799444&spn=0.03,0.03
+rank of visited url 0.125
+visited at 1631402704.527377url # 113
+url http://toscanathunderteam.phpbbitalia.com/
+rank of visited url 0.16666666666666666
+visited at 1631402707.3667169url # 114
+url http://transportation.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402709.051939url # 115
+url http://aaa.opisnet.com/index.aspx
+rank of visited url 0.16666666666666666
+visited at 1631402709.471927url # 116
+url http://travel.unl.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402710.7234461url # 117
+url http://accounting.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402711.1096818url # 118
+url http://audit.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402711.504425url # 119
+url http://budget.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402711.8858418url # 120
+url http://bursar.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402712.404876url # 121
+url http://financialaid.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402712.949715url # 122
+url http://fs.unl.edu/
+rank of visited url 0.0625
+visited at 1631402713.280701url # 123
+url http://myred.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402713.435099url # 124
+url http://nebraskalegislature.gov/laws/statutes.php?statute=81-1174
+rank of visited url 0.125
+visited at 1631402714.2393339url # 125
+url http://news.legislature.ne.gov/lrd/
+rank of visited url 0.009433962264150943
+visited at 1631402715.0552url # 126
+url http://passport.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402715.784711url # 127
+url http://iafdb.travel.state.gov/
+rank of visited url 0.16666666666666666
+visited at 1631402715.933762url # 128
+url http://international.unl.edu/visas
+rank of visited url 0.16666666666666666
+visited at 1631402716.569458url # 129
+url http://enthompson.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402717.63519url # 131
+url http://learncom.unl.edu/sc/ent
+rank of visited url 0.16666666666666666
+visited at 1631402718.376877url # 132
+url http://housing.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402719.367806url # 133
+url http://catering.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402719.571975url # 134
+url http://conferenceservices.unl.edu/
+rank of visited url 0.0625
+visited at 1631402719.730349url # 136
+url http://involved.unl.edu/
+rank of visited url 0.125
+visited at 1631402720.466667url # 137
+url http://bigredwelcome.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402720.752699url # 138
+url http://childcare.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402722.042558url # 139
+url http://crec.unl.edu/
+rank of visited url 0.125
+visited at 1631402722.207245url # 140
+url http://engage.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402722.567987url # 141
+url http://huskerpower.unl.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402722.993451url # 142
+url http://ncard.unl.edu/passport
+rank of visited url 0.16666666666666666
+visited at 1631402723.311795url # 144
+url http://payroll.unl.edu/
+rank of visited url 0.1
+visited at 1631402724.6744692url # 145
+url http://peoplefinder.unl.edu/
+rank of visited url 0.125
+visited at 1631402724.956233url # 147
+url http://research.unl.edu/researchresponsibility/research-may-be-subject-to-export-controls-if-you/
+rank of visited url 0.07142857142857142
+visited at 1631402727.300342url # 148
+url http://export.gov/ecr/eg_main_023148.asp
+rank of visited url 0.16666666666666666
+visited at 1631402730.823039url # 149
+url http://build.export.gov/main/ecr/eg_main_023180
+rank of visited url 0.125
+visited at 1631402731.1783192url # 150
+url http://developer.trade.gov/consolidated-screening-list.html
+rank of visited url 0.125
+visited at 1631402807.028073url # 151
+url http://innovate.unl.edu/
+rank of visited url 0.125
+visited at 1631402807.4050581url # 152
+url http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-171r1.pdf
+rank of visited url 0.125
+visited at 1631402807.618756url # 153
+url http://stuaccts.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402808.247689url # 154
+url http://parentsassoc.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402808.663716url # 155
+url http://powerofparenting.unl.edu/
+rank of visited url 0.125
+visited at 1631402809.041331url # 156
+url http://registrar.unl.edu/academic-calendar
+rank of visited url 0.125
+visited at 1631402809.23605url # 157
+url http://ferpa.unl.edu/students-0
+rank of visited url 0.0625
+visited at 1631402809.669502url # 158
+url http://my.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402810.091276url # 159
+url http://its.nebraska.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402810.4879448url # 160
+url http://careers.nebraska.edu/
+rank of visited url 0.1
+visited at 1631402811.084063url # 161
+url http://ncta.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402811.451665url # 162
+url http://casnr.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402811.665691url # 163
+url http://ard.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402811.932943url # 164
+url http://extension.unl.edu/
+rank of visited url 0.125
+visited at 1631402812.2354188url # 165
+url http://4h.unl.edu/
+rank of visited url 0.045454545454545456
+visited at 1631402812.4046478url # 166
+url http://beef.unl.edu/
+rank of visited url 0.125
+visited at 1631402812.635745url # 167
+url http://child.unl.edu/
+rank of visited url 0.125
+visited at 1631402812.950581url # 168
+url http://communityenvironment.unl.edu/
+rank of visited url 0.125
+visited at 1631402813.413985url # 169
+url http://acreagenebraska.org/
+rank of visited url 0.015151515151515152
+visited at 1631402813.6827872url # 170
+url http://byf.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402815.871961url # 171
+url http://agronomy.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402816.069582url # 172
+url http://agrohortonline.unl.edu/
+rank of visited url 0.05555555555555555
+visited at 1631402816.7022452url # 173
+url http://cyfs.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402816.894869url # 174
+url http://digitaldiagnostics.unl.edu/
+rank of visited url 0.1
+visited at 1631402818.208159url # 175
+url http://disaster.unl.edu/
+rank of visited url 0.125
+visited at 1631402818.668739url # 176
+url http://cropwatch.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402818.930061url # 177
+url http://agalmanac.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402819.1537158url # 178
+url http://eepurl.com/dCQazT
+rank of visited url 0.05
+visited at 1631402819.730847url # 179
+url http://entomology.unl.edu/
+rank of visited url 0.125
+visited at 1631402820.4944792url # 180
+url http://epd.unl.edu/
+rank of visited url 0.07142857142857142
+visited at 1631402820.66645url # 181
+url http://extensionpubs.unl.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402821.364954url # 182
+url http://extensiontv.unl.edu/
+rank of visited url 0.125
+visited at 1631402822.3495932url # 183
+url http://food.unl.edu/
+rank of visited url 0.1
+visited at 1631402823.1674838url # 184
+url http://buylocalnebraska.org/
+rank of visited url 0.0625
+visited at 1631402823.378577url # 185
+url http://historicbuildings.unl.edu/building.php?b=37
+rank of visited url 0.16666666666666666
+visited at 1631402825.325501url # 186
+url http://ianrmedia.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402825.834532url # 187
+url http://ianrpubs.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402826.121286url # 188
+url http://iris.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402826.8135538url # 189
+url http://mapacademy.unl.edu/
+rank of visited url 0.1
+visited at 1631402827.26095url # 190
+url http://marketjournal.unl.edu/home
+rank of visited url 0.125
+visited at 1631402827.600995url # 191
+url http://mastergardener.unl.edu/
+rank of visited url 0.045454545454545456
+visited at 1631402828.059196url # 192
+url http://arboretum.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402828.330612url # 193
+url http://droughtmonitor.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402829.7180438url # 194
+url http://globalcdi.unl.edu/usdm/US_Maps/US_Maps_current.pdf
+rank of visited url 0.1
+visited at 1631402830.482562url # 196
+url http://ne4hfoundation.org/
+rank of visited url 0.16666666666666666
+visited at 1631402835.428011url # 197
+url http://nfs.unl.edu/
+rank of visited url 0.125
+visited at 1631402836.765763url # 198
+url http://nifa.usda.gov/
+rank of visited url 0.05555555555555555
+visited at 1631402836.9124212url # 199
+url http://online.unl.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402837.640795url # 200
+url http://highschool.nebraska.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402837.934752url # 202
+url http://online.nebraska.edu/
+rank of visited url 0.125
+visited at 1631402841.002452url # 203
+url http://online2.nebraska.edu/About-NU/State-Regulatory-Authorization.aspx
+rank of visited url 0.08333333333333333
+visited at 1631402841.50301url # 204
+url http://pdc.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402841.6285188url # 205
+url http://pested.unl.edu/psephome
+rank of visited url 0.1
+visited at 1631402842.084388url # 206
+url http://plantnebraska.org/
+rank of visited url 0.003048780487804878
+visited at 1631402842.5603142url # 207
+url http://plantpathology.unl.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402843.037052url # 208
+url http://apsnet.org/
+rank of visited url 0.16666666666666666
+visited at 1631402843.618965url # 209
+url http://ianrhome.unl.edu/home
+rank of visited url 0.16666666666666666
+visited at 1631402844.4282749url # 212
+url http://snr.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402845.261963url # 213
+url http://nebraskamaps.unl.edu/
+rank of visited url 0.1
+visited at 1631402845.956469url # 214
+url http://csd.unl.edu/
+rank of visited url 0.1
+visited at 1631402846.165707url # 215
+url http://status.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402846.827878url # 216
+url http://stuafs.unl.edu/
+rank of visited url 0.023809523809523808
+visited at 1631402847.973641url # 217
+url http://studentaccounts.unl.edu/
+rank of visited url 0.016666666666666666
+visited at 1631402848.421841url # 218
+url http://success.unl.edu/
+rank of visited url 0.1
+visited at 1631402848.59285url # 219
+url http://sunup.okstate.edu/category/ccc
+rank of visited url 0.16666666666666666
+visited at 1631402848.9415329url # 220
+url http://access.it.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402849.942179url # 221
+url http://admissions.okstate.edu/
+rank of visited url 0.1
+visited at 1631402850.438091url # 222
+url http://aged.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402850.992794url # 223
+url http://app.it.okstate.edu/directory
+rank of visited url 0.07142857142857142
+visited at 1631402851.611211url # 224
+url http://biochemistry.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402851.754049url # 225
+url http://bioen.okstate.edu/
+rank of visited url 0.125
+visited at 1631402852.572974url # 227
+url http://calendar.okstate.edu/
+rank of visited url 0.1
+visited at 1631402853.084158url # 228
+url http://campusrec.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402853.329003url # 229
+url http://casnr.okstate.edu/
+rank of visited url 0.023809523809523808
+visited at 1631402853.57115url # 230
+url http://catalog.okstate.edu/
+rank of visited url 0.05
+visited at 1631402854.21016url # 231
+url http://chttp/newstudents.okstate.edu
+rank of visited url 0.16666666666666666
+visited at 1631402855.047519url # 232
+url http://countyext2.okstate.edu/
+rank of visited url 0.125
+visited at 1631402855.837003url # 233
+url http://cowboyjournal.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402856.490178url # 234
+url http://croptrials.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402857.290973url # 235
+url http://dasnr.okstate.edu/campaign
+rank of visited url 0.038461538461538464
+visited at 1631402857.779593url # 236
+url http://4h.okstate.edu/
+rank of visited url 0.125
+visited at 1631402858.928464url # 237
+url http://acs.okstate.edu/
+rank of visited url 0.125
+visited at 1631402859.4079812url # 238
+url http://agbiotech.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402859.744372url # 239
+url http://agecon.okstate.edu/
+rank of visited url 0.125
+visited at 1631402860.5993779url # 240
+url http://ansi.okstate.edu/
+rank of visited url 0.125
+visited at 1631402861.206103url # 241
+url http://bae.okstate.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402862.760129url # 242
+url http://biopec.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402864.5719502url # 243
+url http://directory.dasnr.okstate.edu/
+rank of visited url 0.125
+visited at 1631402865.0818079url # 244
+url http://entoplp.okstate.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402865.834631url # 245
+url http://es.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402866.664425url # 246
+url http://facinfo.okstate.edu/interactive-maps/campus-map.aspx
+rank of visited url 0.07142857142857142
+visited at 1631402867.050946url # 247
+url http://facultycouncil.okstate.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402867.725821url # 248
+url http://fapc.okstate.edu/
+rank of visited url 0.125
+visited at 1631402868.1365519url # 249
+url http://fcs.okstate.edu/
+rank of visited url 0.125
+visited at 1631402870.062687url # 250
+url http://financialaid.okstate.edu/
+rank of visited url 0.08333333333333333
+visited at 1631402870.380189url # 251
+url http://go.okstate.edu/
+rank of visited url 0.0006510416666666666
+visited at 1631402871.0440938url # 252
+url http://gradcollege.okstate.edu/
+rank of visited url 0.045454545454545456
+visited at 1631402871.92084url # 253
+url http://healthycampus.okstate.edu/
+rank of visited url 0.125
+visited at 1631402872.295407url # 254
+url http://hireosugrads.com/
+rank of visited url 0.005434782608695652
+visited at 1631402872.511654url # 255
+url http://hortla.okstate.edu/
+rank of visited url 0.125
+visited at 1631402873.372499url # 256
+url http://botanicgarden.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402874.548772url # 257
+url http://hr.dasnr.okstate.edu/
+rank of visited url 0.045454545454545456
+visited at 1631402875.059466url # 259
+url http://humansciences.okstate.edu/
+rank of visited url 0.07142857142857142
+visited at 1631402876.111735url # 260
+url http://internationalagprograms.dasnr.okstate.edu/
+rank of visited url 0.05
+visited at 1631402876.667153url # 261
+url http://it.okstate.edu/
+rank of visited url 0.017241379310344827
+visited at 1631402876.926729url # 262
+url http://jobs.okstate.edu/
+rank of visited url 0.016666666666666666
+visited at 1631402877.379711url # 263
+url http://kitchensink.okstate.edu/
+rank of visited url 0.041666666666666664
+visited at 1631402878.179512url # 264
+url http://agwater.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402878.741666url # 265
+url http://fp.okstate.edu/sac/
+rank of visited url 0.16666666666666666
+visited at 1631402879.6438909url # 266
+url http://maps.okstate.edu/
+rank of visited url 0.014285714285714285
+visited at 1631402879.853745url # 267
+url http://miap.okstate.edu/
+rank of visited url 0.07142857142857142
+visited at 1631402880.5327702url # 268
+url http://newstudents.okstate.edu/
+rank of visited url 0.05555555555555555
+visited at 1631402881.136495url # 269
+url http://nrem.okstate.edu/
+rank of visited url 0.03125
+visited at 1631402882.0409029url # 270
+url http://forms.office.com/Pages/ResponsePage.aspx?id=HclpKknoNE6iMM34sn4ZZBA0afPZ-IdAlZyNPUmQ1blURDQ1SUlUVk9URzdJRktQOTVFWUxJQVNYQS4u
+rank of visited url 0.1
+visited at 1631402882.8589492url # 271
+url http://oaes.okstate.edu/
+rank of visited url 0.027777777777777776
+visited at 1631402883.801244url # 272
+url http://oces.okstate.edu/oksusag
+rank of visited url 0.0625
+visited at 1631402884.009048url # 273
+url http://okla.st/socialdir
+rank of visited url 0.08333333333333333
+visited at 1631402885.93672url # 274
+url http://oklahoma4h.okstate.edu/
+rank of visited url 0.07142857142857142
+visited at 1631402888.828529url # 275
+url http://oklahomagardening.okstate.edu/
+rank of visited url 0.07142857142857142
+visited at 1631402888.936979url # 276
+url http://factsheets.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402890.251571url # 277
+url http://okpecans.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402890.879091url # 278
+url http://oksare.okstate.edu/
+rank of visited url 0.014285714285714285
+visited at 1631402891.3991559url # 280
+url http://okstate.edu/
+rank of visited url 0.07142857142857142
+visited at 1631402893.923674url # 281
+url http://oksusag.okstate.edu/
+rank of visited url 0.125
+visited at 1631402894.562113url # 282
+url http://orangeconnection.org/s/860/start.aspx
+rank of visited url 0.03333333333333333
+visited at 1631402896.075992url # 283
+url http://gopok.es/OCappiT
+rank of visited url 0.1
+visited at 1631402900.446295url # 284
+url http://osu-tulsa.okstate.edu/index.php
+rank of visited url 0.03333333333333333
+visited at 1631402902.054465url # 285
+url http://compliance.okstate.edu/
+rank of visited url 0.1
+visited at 1631402902.832455url # 286
+url http://cowboymail.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402903.123171url # 287
+url http://downtowntulsaok.com/
+rank of visited url 0.05555555555555555
+visited at 1631402904.992967url # 288
+url http://ombudsman.okstate.edu/
+rank of visited url 0.0625
+visited at 1631402906.736321url # 289
+url http://osu.okstate.edu/safety/
+rank of visited url 0.08333333333333333
+visited at 1631402907.079405url # 290
+url http://osugiving.com/
+rank of visited url 0.007352941176470588
+visited at 1631402907.228488url # 291
+url http://osuledgers.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402909.0140631url # 292
+url http://payroll.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402909.2295198url # 293
+url http://president.okstate.edu/
+rank of visited url 0.05
+visited at 1631402909.7629418url # 294
+url http://pss.okstate.edu/
+rank of visited url 0.1
+visited at 1631402910.188838url # 295
+url http://regents.okstate.edu/
+rank of visited url 0.05
+visited at 1631402910.762382url # 297
+url http://reslife.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402911.344337url # 298
+url http://sac.okstate.edu/
+rank of visited url 0.05555555555555555
+visited at 1631402911.7532768url # 299
+url http://safety.okstate.edu/
+rank of visited url 0.00684931506849315
+visited at 1631402912.0231318url # 300
+url http://sds.okstate.edu/
+rank of visited url 0.05
+visited at 1631402912.3443148url # 301
+url http://shopokstate.com/
+rank of visited url 0.16666666666666666
+visited at 1631402912.554556url # 302
+url http://statemagazine.okstate.edu/
+rank of visited url 0.125
+visited at 1631402915.5425081url # 303
+url http://studentaffairs.okstate.edu/
+rank of visited url 0.045454545454545456
+visited at 1631402916.156424url # 304
+url http://suggestions.okstate.edu/
+rank of visited url 0.0625
+visited at 1631402916.736659url # 306
+url http://sustainability.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402917.587647url # 307
+url http://campuslink.okstate.edu/organization/NetImpact
+rank of visited url 0.125
+visited at 1631402918.2741592url # 308
+url http://foodstudies.okstate.edu/
+rank of visited url 0.125
+visited at 1631402918.806355url # 309
+url http://osurha.org/
+rank of visited url 0.16666666666666666
+visited at 1631402919.049941url # 310
+url http://osusga.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402919.275239url # 311
+url http://sustainablestillwater.org/
+rank of visited url 0.16666666666666666
+visited at 1631402919.6985002url # 312
+url http://swegulo2@unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402924.770856url # 313
+url http://talent.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402925.2463071url # 314
+url http://teaching.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402925.6270988url # 315
+url http://trademarks.okstate.edu/
+rank of visited url 0.005747126436781609
+visited at 1631402926.0738711url # 316
+url http://trianglenews.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402926.663318url # 317
+url http://trio.unl.edu/
+rank of visited url 0.125
+visited at 1631402926.888763url # 318
+url http://turf.unl.edu/
+rank of visited url 0.1
+visited at 1631402927.057472url # 319
+url http://ucomm.unl.edu/
+rank of visited url 0.0625
+visited at 1631402927.260125url # 320
+url http://ukraine-domain.com/
+rank of visited url 0.16666666666666666
+visited at 1631402927.593997url # 321
+url http://uli.nli.org.il/F/?doc_number=000974521&func=direct&local_base=nlx10
+rank of visited url 0.16666666666666666
+visited at 1631402929.5533628url # 322
+url http://nli.org.il/
+rank of visited url 0.16666666666666666
+visited at 1631402932.9073138url # 323
+url http://unc.edu/
+rank of visited url 0.0009276437847866419
+visited at 1631402937.20323url # 325
+url http://carolinanext.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402937.672894url # 326
+url http://uncnews.unc.edu/experts/
+rank of visited url 0.1
+visited at 1631402939.0496929url # 327
+url http://undergrad-ed.unc.edu/
+rank of visited url 0.125
+visited at 1631402939.5728362url # 328
+url http://advising.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402940.872532url # 329
+url http://cssac.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631402942.145508url # 330
+url http://fys.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403017.5896692url # 331
+url http://learningcenter.unc.edu/
+rank of visited url 0.125
+visited at 1631403018.830084url # 334
+url http://undgrares2020.sites.unc.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403021.586536url # 336
+url http://unions.unl.edu/
+rank of visited url 0.045454545454545456
+visited at 1631403022.384362url # 337
+url http://foodtrucks.unl.edu/welcome
+rank of visited url 0.16666666666666666
+visited at 1631403022.550596url # 339
+url http://sofs.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403024.313525url # 340
+url http://unit.nebraska.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403024.4799979url # 341
+url http://unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403024.650076url # 342
+url http://unlcms.unl.edu/student-affairs/power-of-parenting/drinking-unl
+rank of visited url 0.16666666666666666
+visited at 1631403025.145568url # 343
+url http://unlgardens.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403025.7065868url # 344
+url http://up.thefreedictionary.com/trc.ashx?info=download&sender=farlex
+rank of visited url 0.045454545454545456
+visited at 1631403026.108449url # 345
+url http://farlex.com/DA-Setup.exe
+rank of visited url 0.125
+visited at 1631403026.321873url # 346
+url http://update.legislature.ne.gov/
+rank of visited url 0.021739130434782608
+visited at 1631403027.1925771url # 348
+url http://us.unl.edu/
+rank of visited url 0.022727272727272728
+visited at 1631403028.205166url # 349
+url http://inventory.unl.edu/
+rank of visited url 0.1
+visited at 1631403028.368654url # 350
+url http://printing.unl.edu/
+rank of visited url 0.125
+visited at 1631403028.591605url # 351
+url http://us1.campaign-archive2.com/home/?id=1d67c2c688&u=16490cec388bcee8a9fd4e0f8
+rank of visited url 0.125
+visited at 1631403029.360529url # 353
+url http://vending.unl.edu/
+rank of visited url 0.125
+visited at 1631403033.005569url # 354
+url http://veteran.unl.edu/
+rank of visited url 0.125
+visited at 1631403033.4504168url # 355
+url http://bulletin.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403033.884453url # 356
+url http://iim.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403034.473676url # 357
+url http://getlockr.com/
+rank of visited url 0.16666666666666666
+visited at 1631403034.72442url # 358
+url http://svcaa.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403035.512393url # 359
+url http://vetsuccess.unl.edu/
+rank of visited url 0.041666666666666664
+visited at 1631403035.9668102url # 360
+url http://video.okstate.edu/
+rank of visited url 0.125
+visited at 1631403036.24025url # 361
+url http://visit.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403037.17419url # 362
+url http://visitstillwater.org/
+rank of visited url 0.16666666666666666
+visited at 1631403037.659434url # 363
+url http://stillwater.org/files/news-releases/covid-19/ordinances/Proclamation-Rescinding-State-of-Emergency-051421.pdf
+rank of visited url 0.08333333333333333
+visited at 1631403040.2433732url # 364
+url http://water.okstate.edu/
+rank of visited url 0.023809523809523808
+visited at 1631403043.530245url # 365
+url http://water.unl.edu/
+rank of visited url 0.125
+visited at 1631403043.932422url # 366
+url http://waterforfood.nebraska.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403044.1162581url # 367
+url http://waze.to/?ll=41.799444,12.597222
+rank of visited url 0.125
+visited at 1631403044.974414url # 368
+url http://weather-in.by/
+rank of visited url 0.16666666666666666
+visited at 1631403045.367004url # 369
+url http://weather-in.kz/
+rank of visited url 0.16666666666666666
+visited at 1631403047.517431url # 370
+url http://weather-in.ru/
+rank of visited url 0.16666666666666666
+visited at 1631403050.311011url # 371
+url http://weather-ready.unl.edu/
+rank of visited url 0.017241379310344827
+visited at 1631403053.4249542url # 372
+url http://agritools.unl.edu/management-strategies/
+rank of visited url 0.125
+visited at 1631403053.7395132url # 373
+url http://articles.extension.org/pages/70313/production-agriculture-and-stress
+rank of visited url 0.125
+visited at 1631403054.220929url # 374
+url http://blog-crop-news.extension.umn.edu/2016/05/potential-impact-of-cold-temperatures.html
+rank of visited url 0.125
+visited at 1631403054.7804859url # 375
+url http://extensionenespanol.net/
+rank of visited url 0.16666666666666666
+visited at 1631403055.4487302url # 376
+url http://extensionpublications.unl.edu/assets/pdf/ec155.pdf
+rank of visited url 0.010869565217391304
+visited at 1631403058.1176589url # 377
+url http://igrow.org/agronomy/corn/the-value-of-crop-residue/
+rank of visited url 0.005555555555555556
+visited at 1631403060.240602url # 378
+url http://msue.anr.msu.edu/news/relative_maturity_and_its_relationship_to_yield_and_moisture
+rank of visited url 0.0625
+visited at 1631403061.190944url # 379
+url http://northcentralwater.org/
+rank of visited url 0.16666666666666666
+visited at 1631403062.7933068url # 380
+url http://scacis.rcc-acis.org/
+rank of visited url 0.16666666666666666
+visited at 1631403065.971104url # 381
+url http://acis-compare.rcc-acis.org/
+rank of visited url 0.16666666666666666
+visited at 1631403066.390529url # 382
+url http://sdstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403066.911016url # 383
+url http://jacksemail.sdstate.edu/
+rank of visited url 0.018518518518518517
+visited at 1631403067.7804108url # 384
+url http://weather.in.ua/
+rank of visited url 0.16666666666666666
+visited at 1631403070.759812url # 385
+url http://web.ics.purdue.edu/~rauhn/fall_of_republic.htm
+rank of visited url 0.022727272727272728
+visited at 1631403072.4402409url # 386
+url http://web.tiscali.it/linnets/Troll-Paffen.jpg
+rank of visited url 0.16666666666666666
+visited at 1631403072.8634508url # 387
+url http://assistenza.tiscali.it/tecnica/servizi/spazioweb/index.php
+rank of visited url 0.125
+visited at 1631403076.510378url # 388
+url http://business.tiscali.it/hosting_domini/
+rank of visited url 0.05555555555555555
+visited at 1631403099.962729url # 389
+url http://rd.tiscali.it/?dm=link&p=tiscali&r=TS00000A00022&u=http://casa.tiscali.it/&utm_campaign=toolbarvetrina&utm_content=casa_hpcasa&utm_medium=link&wt_np=tiscali.link.toolbarvetrina.casa.assistenza.desktop
+rank of visited url 0.03571428571428571
+visited at 1631403101.170332url # 390
+url http://vas.tiscali.it/spaziodisco/
+rank of visited url 0.16666666666666666
+visited at 1631403103.6785338url # 391
+url http://webemp.okstate.edu/
+rank of visited url 0.045454545454545456
+visited at 1631403106.4863071url # 392
+url http://my.connorsstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403107.4506292url # 393
+url http://my.langston.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403109.970398url # 394
+url http://my.neo.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403111.407763url # 395
+url http://my.opsu.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403112.761694url # 396
+url http://webspace.tiscali.it/
+rank of visited url 0.013888888888888888
+visited at 1631403115.924072url # 397
+url http://weedscience.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403116.7582011url # 398
+url http://wellness.okstate.edu/
+rank of visited url 0.125
+visited at 1631403116.833615url # 399
+url http://whc.unesco.org/en/list/91
+rank of visited url 0.001524390243902439
+visited at 1631403117.2953url # 400
+url http://en.unesco.org/careers/
+rank of visited url 0.16666666666666666
+visited at 1631403118.267476url # 402
+url http://unesdoc.unesco.org/
+rank of visited url 0.125
+visited at 1631403126.1074948url # 403
+url http://wikimap.toolforge.org/?lang=en&lat=41.799444&lon=12.597222&wp=false&zoom=14
+rank of visited url 0.125
+visited at 1631403126.774291url # 404
+url http://wikimapia.org/#lang%3Den%26lat%3D41.799444%26lon%3D12.597222%26z%3D14%26m%3Dw
+rank of visited url 0.1
+visited at 1631403126.936277url # 405
+url http://windyacresnaturalfarm.blogspot.com/
+rank of visited url 0.16666666666666666
+visited at 1631403128.1269288url # 406
+url http://wit.okstate.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403129.447531url # 407
+url http://wma.wmflabs.org/iframe.html?globe=Earth&lang=en&page=Rome_Ciampino_Airport&wma=41.799444_12.597222_700_500_en_7_en
+rank of visited url 0.16666666666666666
+visited at 1631403130.9055512url # 408
+url http://wokinfo.com/products_tools/multidisciplinary/dci/
+rank of visited url 0.16666666666666666
+visited at 1631403131.3143392url # 409
+url http://clarivate.libguides.com/webofscienceplatform/dci
+rank of visited url 0.125
+visited at 1631403133.8515441url # 410
+url http://discover.clarivate.com/WebofScienceNewsletter
+rank of visited url 0.16666666666666666
+visited at 1631403134.773862url # 411
+url http://ips.clarivate.com/training/?elqTrackId=44d19283307a4fed9079280beb98e0c4&elqaid=3549&elqat=2
+rank of visited url 0.16666666666666666
+visited at 1631403137.226648url # 412
+url http://endnote.com/training
+rank of visited url 0.16666666666666666
+visited at 1631403137.707573url # 413
+url http://mchelp.manuscriptcentral.com/gethelpnow/training/author/
+rank of visited url 0.16666666666666666
+visited at 1631403138.9858072url # 414
+url http://mjl.clarivate.com/
+rank of visited url 0.1
+visited at 1631403140.338979url # 415
+url http://webofsciencelearning.clarivate.com/
+rank of visited url 0.1
+visited at 1631403140.930526url # 416
+url http://wordpress.org/
+rank of visited url 0.07142857142857142
+visited at 1631403142.427881url # 417
+url http://learn.wordpress.org/
+rank of visited url 0.125
+visited at 1631403142.621035url # 418
+url http://make.wordpress.org/
+rank of visited url 0.07142857142857142
+visited at 1631403143.4900239url # 419
+url http://php.net/manual/en/intro-whatis.php
+rank of visited url 0.125
+visited at 1631403144.547251url # 420
+url http://wp-cli.org/
+rank of visited url 0.16666666666666666
+visited at 1631403146.003968url # 421
+url http://writingcenter.unc.edu/
+rank of visited url 0.07142857142857142
+visited at 1631403147.123917url # 422
+url http://ws.geonames.org/extendedFindNearby?lat=41.799444&lng=12.597222
+rank of visited url 0.16666666666666666
+visited at 1631403147.31648url # 423
+url http://ww2.webcomp.com/virtuale/us/roma/movie.htm
+rank of visited url 0.125
+visited at 1631403147.7995992url # 424
+url http://www-museum.unl.edu/
+rank of visited url 0.16666666666666666
+visited at 1631403149.609044url # 426
+url http://www.aaa.com/Suggestions.html
+rank of visited url 0.125
+visited at 1631403150.271331url # 428
+url http://www.aboutads.info/consumers
+rank of visited url 0.1
+visited at 1631403150.557777url # 430
+url http://www.acs.okstate.edu/
+rank of visited url 0.05555555555555555
+visited at 1631403151.618766url # 431
+url http://www.adriangoldsworthy.com/ancienthistory.htm
+rank of visited url 0.029411764705882353
+visited at 1631403152.261207url # 432
+url http://www.agecon.okstate.edu/
+rank of visited url 0.02631578947368421
+visited at 1631403154.0487978url # 433
+url http://www.agronext.iastate.edu/soilfertility/info/NC2007-p38-Sawyer.pdf
+rank of visited url 0.05
+visited at 1631403154.540499url # 434
+url http://www.ancientlibrary.com/smith-bio/0547.html
+rank of visited url 0.05555555555555555
+visited at 1631403156.596212url # 435
+url http://www.ansamed.info/ansamed/en/news/nations/italy/2018/07/13/rome-chosen-as-seat-of-euro-med-assembly-secretariat_1915c82d-78f2-41e3-9bd7-69b0ba27ee6c.html
+rank of visited url 0.16666666666666666
+visited at 1631403233.33338url # 436
+url http://english.ahram.org.eg/
+rank of visited url 0.16666666666666666
+visited at 1631403235.2915132url # 437
+url http://gate.ahram.org.eg/
+rank of visited url 0.125
+visited at 1631403238.3583848url # 438
+url http://advertising.ahram.org.eg/
+rank of visited url 0.16666666666666666
+visited at 1631403239.529077url # 439
+url http://iicuae.com/?locale=en
+rank of visited url 0.16666666666666666
+visited at 1631403240.014969url # 440
+url http://wam.ae/en
+rank of visited url 0.16666666666666666
+visited at 1631403242.22252url # 441
+url http://www.aman-alliance.org/
+rank of visited url 0.16666666666666666
+visited at 1631403243.913049url # 442
+url http://aman-alliance.org/data/news.php
+rank of visited url 0.005376344086021506
+visited at 1631403249.113452url # 443
+url http://www.abnaorg.eu/
+rank of visited url 0.125
+visited at 1631403250.735913url # 444
+url http://www.afp.com/
+rank of visited url 0.1
+visited at 1631403327.7847092url # 445
+url http://www.ami.mr/
+rank of visited url 0.1
+visited at 1631403329.176409url # 446
+url http://www.ana.gr/
+rank of visited url 0.1
+visited at 1631403335.0570948url # 447
+url http://www.anadoluajansi.com.tr/
+rank of visited url 0.1
+visited at 1631403343.5060108url # 448
+url http://www.ansa.it/
+rank of visited url 0.038461538461538464
+visited at 1631403426.6225688url # 449
+url http://www.ansi.okstate.edu/
+rank of visited url 0.025
+visited at 1631403427.304126url # 450
+url http://www.aps.dz/en/
+rank of visited url 0.006493506493506494
+visited at 1631403427.475861url # 451
+url http://www.archaeology.org/issues/132-1405/trenches/1982-reexcavation-rome-earliest-temple
+rank of visited url 0.023809523809523808
+visited at 1631403431.1692789url # 452
+url http://archive.archaeology.org/
+rank of visited url 0.03333333333333333
+visited at 1631403432.4534552url # 453
+url http://www.archeorm.arti.beniculturali.it/
+rank of visited url 0.1
+visited at 1631403433.290946url # 454
+url http://www.archiviolastampa.it/component/option,com_frontpage/Itemid,1/
+rank of visited url 0.0029411764705882353
+visited at 1631403433.584667url # 457
+url http://www.assocamerestero.it/
+rank of visited url 0.16666666666666666
+visited at 1631403513.099106url # 458
+url http://www.ata.gov.al/
+rank of visited url 0.1
+visited at 1631403518.508885url # 459
+url http://arkiva.ata.gov.al/
+rank of visited url 0.16666666666666666
+visited at 1631403521.5545862url # 460
+url http://albanian.cri.cn/
+rank of visited url 0.16666666666666666
+visited at 1631403529.154142url # 461
+url http://al.chineseembassy.org/chn/
+rank of visited url 0.16666666666666666
+visited at 1631403530.433642url # 462
+url http://al.mofcom.gov.cn/
+rank of visited url 0.16666666666666666
+visited at 1631403532.6793768url # 463
+url http://aqygzj.mofcom.gov.cn/
+rank of visited url 0.16666666666666666
+visited at 1631403536.2770162url # 464
+url http://ata.gov.al/
+rank of visited url 0.0023148148148148147
+visited at 1631403540.063104url # 465
+url http://auc.mofcom.gov.cn/auc_new/
+rank of visited url 0.125
+visited at 1631403541.212193url # 466
+url http://bfqc.scjss.mofcom.gov.cn/login
+rank of visited url 0.125
+visited at 1631403545.84672url # 467
+url http://bgt.mofcom.gov.cn/
+rank of visited url 0.125
+visited at 1631403547.832952url # 468
+url http://big5.mofcom.gov.cn/
+rank of visited url 0.1
+visited at 1631403551.339856url # 469
+url http://boc.dl.gov.cn/
+rank of visited url 0.1
+visited at 1631403552.8870358url # 470
+url http://bofcom.qingdao.gov.cn/
+rank of visited url 0.1
+visited at 1631403559.8200362url # 471
+url http://12335.mofcom.gov.cn/
+rank of visited url 0.16666666666666666
+visited at 1631403561.085173
