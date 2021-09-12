@@ -17,9 +17,8 @@ urls_visited = {}
 count = 0
 RANK_IDX = 0
 PAGES_CRAWLED_IDX = 1
-NUM_HYPERLINKS_IDX = 2
-NOVELTY_IDX = 3
-IMPORTANCE_IDX = 4
+NOVELTY_IDX = 2
+IMPORTANCE_IDX = 3
 
 log = open("log_file.txt", "w")
 log.write("Beginning of the log file")
@@ -29,26 +28,41 @@ def print_urls():
         print(urls.get())
 
 
-def update_score(urls_visited, domain_url, novelty_weight, importance_weight):
-    if domain_url not in urls_visited:
-        pages_crawled = 1
-        curr_importance = 0
-        num_hyperlinks = 1
-    else:
-        pages_crawled = urls_visited.get(domain_url)[PAGES_CRAWLED_IDX]
-        curr_importance = urls_visited.get(domain_url)[IMPORTANCE_IDX]
-        num_hyperlinks = urls_visited.get(domain_url)[NUM_HYPERLINKS_IDX]
-    new_novelty = 1 / (pages_crawled + 1)
-    priority = novelty_weight * new_novelty + importance_weight * curr_importance
-    urls_visited[domain_url] = list((priority, pages_crawled + 1,
-                                    num_hyperlinks, new_novelty, curr_importance))
+# importance corresponds to the number of hyperlinks we've encountered to the given
+# website, we need to remove the number of hyperlinks paramater from the urls_visited
+# dictionary
+def update_score(urls_visited, domain_url, novelty_weight, importance_weight, crawling=False, see_again=True):
+        if domain_url not in urls_visited and crawling:
+            pages_crawled = 1
+            curr_importance = 1
+            new_novelty = 1 / (pages_crawled + 1)
+            priority = novelty_weight * new_novelty + importance_weight * curr_importance
+            urls_visited[domain_url] = list((priority, pages_crawled, new_novelty, curr_importance))
+        elif domain_url not in urls_visited and see_again:
+            pages_crawled = 0
+            curr_importance = 0
+            curr_novelty = 1
+            priority = novelty_weight * curr_novelty + importance_weight * curr_importance
+            urls_visited[domain_url] = list((priority, pages_crawled, curr_novelty, curr_importance))
+        elif crawling:
+            pages_crawled = urls_visited.get(domain_url)[PAGES_CRAWLED_IDX] + 1
+            curr_importance = urls_visited.get(domain_url)[IMPORTANCE_IDX]
+            new_novelty = 1 / (pages_crawled + 1)
+            priority = novelty_weight * new_novelty + importance_weight * curr_importance
+            urls_visited[domain_url] = list((priority, pages_crawled, new_novelty, curr_importance))
+        elif see_again:
+            pages_crawled = urls_visited.get(domain_url)[PAGES_CRAWLED_IDX]
+            new_importance = urls_visited.get(domain_url)[IMPORTANCE_IDX] + 1
+            curr_novelty = urls_visited.get(domain_url)[NOVELTY_IDX]
+            priority = novelty_weight * curr_novelty + importance_weight * new_importance
+            urls_visited[domain_url] = list((priority, pages_crawled, curr_novelty, new_importance))
 
 
 def get_log(count, url, rank, curr_time):
     log_file = open("log_file.txt", "a")
     content = ["url # ", str(count), "\n", "url ", str(url), "\n",
-                   "rank of visited url ", str(rank), "\n",
-                   "visited at ", str(curr_time)]
+               "rank of visited url ", str(rank), "\n",
+               "visited at ", str(curr_time)]
     log_file.writelines(content)
     log_file.close()
 
@@ -76,7 +90,7 @@ while not urls.empty():
         pass
     if response.status_code == 200:
         curr_url_domain = urlparse(curr_url).netloc
-        update_score(urls_visited, curr_url_domain, 0.5, 0.5)
+        update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
         get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time)
         html_doc = response.text
         soup = BeautifulSoup(html_doc, 'html.parser')
