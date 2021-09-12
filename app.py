@@ -19,6 +19,7 @@ RANK_IDX = 0
 PAGES_CRAWLED_IDX = 1
 NOVELTY_IDX = 2
 IMPORTANCE_IDX = 3
+DEBUG = False
 
 log = open("log_file.txt", "w")
 log.write("Beginning of the log file")
@@ -72,24 +73,41 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 for webpage in seed:
+    if DEBUG:
+        print(webpage)
     urls.put((- 1, webpage))
+    webpage_domain = urlparse(webpage).netloc
+    update_score(urls_visited, webpage_domain, 0.5, 0.5)
+
 
 start_time = time.time()
 seconds = 4
 while not urls.empty():
     count += 1
-    print("visited count is ", count)
     curr_time = time.time()
-    # if curr_time - start_time > seconds:
-    #     break
+    print("visited count is ", count)
+    if DEBUG:
+        print("visited count is ", count)
+        if curr_time - start_time > seconds:
+            break
     curr_url = urls.get()
+    curr_rank = curr_url[0]
     curr_url = curr_url[1]
+    print("curr url is ", curr_url)
+    curr_url_domain = urlparse(curr_url).netloc
+    updated_rank = urls_visited[curr_url_domain][RANK_IDX]
+    if DEBUG:
+        print("updated rank is ", updated_rank)
+        print("curr rank is", curr_rank)
+    if updated_rank != - curr_rank:
+        urls.put(tuple((- updated_rank, curr_url)))
+        continue
     try:
-        response = requests.get(curr_url)
+        response = requests.get(curr_url, timeout=10)
     except:
         pass
     if response.status_code == 200:
-        curr_url_domain = urlparse(curr_url).netloc
+        # curr_url_domain = urlparse(curr_url).netloc
         update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
         get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time)
         html_doc = response.text
@@ -97,13 +115,17 @@ while not urls.empty():
         url_link_count = 0
         for url_link in soup.find_all('a', href=True):
             url_link_count += 1
-            print("url link count is ", url_link_count)
+            if DEBUG:
+                print("url link count is ", url_link_count)
             abs_url = urljoin(curr_url, url_link['href'])
             # normilize url
             curr_url = url_normalize(abs_url)
             domain_url = urlparse(curr_url).netloc
-            update_score(urls_visited, domain_url, 0.5, 0.5)
-            urls.put(tuple((- urls_visited[domain_url][RANK_IDX], curr_url)))
+            if domain_url in urls_visited:
+                update_score(urls_visited, domain_url, 0.5, 0.5)
+            else:
+                update_score(urls_visited, domain_url, 0.5, 0.5)
+                urls.put(tuple((- urls_visited[domain_url][RANK_IDX], curr_url)))
 
 
 # print("The urls are", len(urls_visited))
