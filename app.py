@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from queue import PriorityQueue
 from googlesearch import search
 from urllib.parse import urljoin, urlparse
+from urllib import robotparser
 from url_normalize import url_normalize
 
 
@@ -20,6 +21,7 @@ PAGES_CRAWLED_IDX = 1
 NOVELTY_IDX = 2
 IMPORTANCE_IDX = 3
 DEBUG = False
+CRAWLER_NAME = "NYU_Crawler"
 
 log = open("log_file.txt", "w")
 log.write("Beginning of the log file")
@@ -59,6 +61,18 @@ def update_score(urls_visited, domain_url, novelty_weight, importance_weight, cr
             urls_visited[domain_url] = list((priority, pages_crawled, curr_novelty, new_importance))
 
 
+def crawler_allowed(root_url, crawled_url):
+    rp = robotparser.RobotFileParser()
+    url_scheme = urlparse(crawled_url).scheme + "://"
+    root_url = url_scheme + root_url
+    robots_url = '{}/robots.txt'.format(root_url)
+    rp.set_url(robots_url)
+    rp.read()
+    if rp.can_fetch(CRAWLER_NAME, crawled_url):
+        return True
+    return False
+
+
 def get_log(count, url, rank, curr_time):
     log_file = open("log_file.txt", "a")
     content = ["url # ", str(count), "\n", "url ", str(url), "\n",
@@ -95,6 +109,7 @@ while not urls.empty():
     curr_url = curr_url[1]
     print("curr url is ", curr_url)
     curr_url_domain = urlparse(curr_url).netloc
+    if not crawler_allowed(curr_url_domain, curr_url): continue
     updated_rank = urls_visited[curr_url_domain][RANK_IDX]
     if DEBUG:
         print("updated rank is ", updated_rank)
