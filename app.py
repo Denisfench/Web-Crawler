@@ -15,7 +15,7 @@ from threading import Thread
 query = input("Please enter a search query ")
 NUM_SEED_PAGES = 10
 seed = search(query, stop=10) # MAJOR BUG HERE, we aren't able to loop over the seed pages
-seed = ['https://en.wikipedia.org']
+# seed = ['https://en.wikipedia.org']
 urls = PriorityQueue()
 urls_visited = {}
 count = 0
@@ -80,7 +80,10 @@ def crawler_allowed(root_url, crawled_url):
     root_url = url_scheme + root_url
     robots_url = '{}/robots.txt'.format(root_url)
     rp.set_url(robots_url)
-    rp.read()
+    try:
+        rp.read()
+    except:
+        pass
     if rp.can_fetch(CRAWLER_NAME, crawled_url):
         return True
     return False
@@ -113,7 +116,6 @@ ctx.verify_mode = ssl.CERT_NONE
 
 # need to add robot exclusion check to seed urls 
 for webpage in seed:
-    print("the webpage is ", webpage)
     if DEBUG:
         print(webpage)
     urls.put((- 1, webpage))
@@ -182,6 +184,7 @@ def main():
         thread.start()
     while threads:
         threads.pop().join()
+    # crawl_pages()
 
 if __name__ == "__main__":
     started = time.time()
