@@ -2,6 +2,7 @@ import urllib.request, urllib.parse, urllib.error
 import ssl
 import requests
 import time
+import pandas as pd
 from bs4 import BeautifulSoup
 from queue import PriorityQueue
 from googlesearch import search
@@ -12,7 +13,7 @@ from url_normalize import url_normalize
 
 # obtaining a seed set of pages from Google based on query
 query = input("Please enter a search query ")
-seed = search(query, stop=10)
+seed = search(query, stop=10) # Google is blocking us if the pause is too short
 urls = PriorityQueue()
 urls_visited = {}
 count = 0
@@ -23,13 +24,19 @@ IMPORTANCE_IDX = 3
 DEBUG = False
 CRAWLER_NAME = "NYU_Crawler"
 
+
+print("seed start")
+for webpage in seed:
+    # print(webpage)
+    pass
+print("seed end")
+
 log = open("log_file.txt", "w")
 log.write("Beginning of the log file")
 
 def print_urls():
     while not urls.empty():
         print(urls.get())
-
 
 # importance corresponds to the number of hyperlinks we've encountered to the given
 # website, we need to remove the number of hyperlinks paramater from the urls_visited
@@ -73,26 +80,43 @@ def crawler_allowed(root_url, crawled_url):
     return False
 
 
-def get_log(count, url, rank, curr_time):
-    log_file = open("log_file.txt", "a")
-    content = ["url # ", str(count), "\n", "url ", str(url), "\n",
-               "rank of visited url ", str(rank), "\n",
-               "visited at ", str(curr_time)]
-    log_file.writelines(content)
-    log_file.close()
+def get_log(count, url, rank, curr_time, content_length, txt=False):
+    if txt:
+        log_file = open("log_file.txt", "a")
+        content = ["url # ", str(count), "\n", "url ", str(url), "\n",
+                   "rank of visited url ", str(rank), "\n",
+                   "visited at ", str(curr_time)]
+        log_file.writelines(content)
+        log_file.close()
+    else:
+        df = pd.DataFrame(columns=["url", "url_rank", "visited_at", "webpage_size"])
+        data = {"url": url, "url_rank": rank, "visited_at": curr_time, "webpage_size": content_length}
+        df = df.append(data, ignore_index=True)
+        df.to_csv('log_file.csv', index=False)
+
 
 # ignore SSL certificate errors
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
+
+# print("seed start")
+# for webpage in seed:
+#     print(webpage)
+# print("seed end")
+
+# need to add robot exclusion check to seed urls 
 for webpage in seed:
+    print("the webpage is ", webpage)
     if DEBUG:
         print(webpage)
     urls.put((- 1, webpage))
     webpage_domain = urlparse(webpage).netloc
     update_score(urls_visited, webpage_domain, 0.5, 0.5)
 
+print("line 104")
+print_urls()
 
 start_time = time.time()
 seconds = 4
@@ -122,9 +146,9 @@ while not urls.empty():
     except:
         pass
     if response.status_code == 200:
-        # curr_url_domain = urlparse(curr_url).netloc
+        content_length = response.headers['content-length']
         update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
-        get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time)
+        get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time, content_length)
         html_doc = response.text
         soup = BeautifulSoup(html_doc, 'html.parser')
         url_link_count = 0
