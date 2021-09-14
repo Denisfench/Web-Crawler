@@ -10,10 +10,11 @@ from urllib.parse import urljoin, urlparse
 from urllib import robotparser
 from url_normalize import url_normalize
 
-
 # obtaining a seed set of pages from Google based on query
 query = input("Please enter a search query ")
-seed = search(query, stop=10) # Google is blocking us if the pause is too short
+NUM_SEED_PAGES = 10
+seed = search(query, stop=10) # MAJOR BUG HERE, we aren't able to loop over the seed pages
+seed = ['https://en.wikipedia.org']
 urls = PriorityQueue()
 urls_visited = {}
 count = 0
@@ -23,16 +24,17 @@ NOVELTY_IDX = 2
 IMPORTANCE_IDX = 3
 DEBUG = False
 CRAWLER_NAME = "NYU_Crawler"
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
 
-
-print("seed start")
-for webpage in seed:
-    # print(webpage)
-    pass
-print("seed end")
+# print("seed start")
+# print()
+# for webpage in seed:
+#     print(webpage)
+# print("seed end")
 
 log = open("log_file.txt", "w")
 log.write("Beginning of the log file")
+df = pd.DataFrame(columns=["url", "url_rank", "visited_at", "webpage_size"])
 
 def print_urls():
     while not urls.empty():
@@ -79,7 +81,7 @@ def crawler_allowed(root_url, crawled_url):
         return True
     return False
 
-
+# time format is bad
 def get_log(count, url, rank, curr_time, content_length, txt=False):
     if txt:
         log_file = open("log_file.txt", "a")
@@ -89,9 +91,8 @@ def get_log(count, url, rank, curr_time, content_length, txt=False):
         log_file.writelines(content)
         log_file.close()
     else:
-        df = pd.DataFrame(columns=["url", "url_rank", "visited_at", "webpage_size"])
         data = {"url": url, "url_rank": rank, "visited_at": curr_time, "webpage_size": content_length}
-        df = df.append(data, ignore_index=True)
+        df.loc[len(df.index)] = data
         df.to_csv('log_file.csv', index=False)
 
 
@@ -114,9 +115,6 @@ for webpage in seed:
     urls.put((- 1, webpage))
     webpage_domain = urlparse(webpage).netloc
     update_score(urls_visited, webpage_domain, 0.5, 0.5)
-
-print("line 104")
-print_urls()
 
 start_time = time.time()
 seconds = 4
@@ -142,11 +140,12 @@ while not urls.empty():
         urls.put(tuple((- updated_rank, curr_url)))
         continue
     try:
-        response = requests.get(curr_url, timeout=10)
+        response = requests.get(curr_url, timeout=10, headers=headers)
     except:
         pass
     if response.status_code == 200:
-        content_length = response.headers['content-length']
+        # content_length = response.headers['content-length'] not neccessarily present
+        content_length = len(response.content)
         update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
         get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time, content_length)
         html_doc = response.text
