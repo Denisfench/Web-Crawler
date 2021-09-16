@@ -25,10 +25,15 @@ NOVELTY_IDX = 2
 IMPORTANCE_IDX = 3
 DEBUG = False
 CRAWLER_NAME = "NYU_Crawler"
-THREAD_POOL_SIZE = 10
+THREAD_POOL_SIZE = 20
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
 
+format_blacklist = {".aac", ".avi", ".bin", ".csh", ".css", ".gif", ".ico", ".ics", ".jar", 
+                    ".jpeg", ".jpg", ".js", ".mp3", ".mpeg", ".mpkg", ".oga", ".ogv", ".opus", 
+                    ".png", ".ppt", ".sh", ".tar", ".xls"}
+
+success_respose = {200, 201, 202, 203, 204, 205, 206, 207, 208, 226}
 # print("seed start")
 # print()
 # for webpage in seed:
@@ -89,7 +94,7 @@ def crawler_allowed(root_url, crawled_url):
     return False
 
 # time format is bad
-def get_log(count, url, rank, curr_time, content_length, txt=False):
+def get_log(count, url, rank, curr_time, content_length, response_code, txt=False):
     if txt:
         log_file = open("log_file.txt", "a")
         content = ["url # ", str(count), "\n", "url ", str(url), "\n",
@@ -152,11 +157,11 @@ def crawl_pages():
             response = requests.get(curr_url, timeout=10, headers=headers)
         except:
             pass
-        if response.status_code == 200:
+        if response.status_code in success_respose:
             # content_length = response.headers['content-length'] not neccessarily present
             content_length = len(response.content)
             update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
-            get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time, content_length)
+            get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time, content_length, response.status_code)
             html_doc = response.text
             soup = BeautifulSoup(html_doc, 'html.parser')
             url_link_count = 0
@@ -173,6 +178,8 @@ def crawl_pages():
                 else:
                     update_score(urls_visited, domain_url, 0.5, 0.5)
                     urls.put(tuple((- urls_visited[domain_url][RANK_IDX], curr_url)))
+        else:
+            get_log(- 1, curr_url, - 1, curr_time, - 1, response.status_code, txt=False)
 
 
 def main():
