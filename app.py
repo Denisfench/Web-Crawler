@@ -29,9 +29,14 @@ THREAD_POOL_SIZE = 20
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
 
-format_blacklist = {".aac", ".avi", ".bin", ".csh", ".css", ".gif", ".ico", ".ics", ".jar", 
-                    ".jpeg", ".jpg", ".js", ".mp3", ".mpeg", ".mpkg", ".oga", ".ogv", ".opus", 
-                    ".png", ".ppt", ".sh", ".tar", ".xls"}
+# format_blacklist = {".aac", ".avi", ".bin", ".csh", ".css", ".gif", ".ico", ".ics", ".jar", 
+#                     ".jpeg", ".jpg", ".js", ".mp3", ".mpeg", ".mpkg", ".oga", ".ogv", ".opus", 
+#                     ".png", ".ppt", ".sh", ".tar", ".xls"}
+
+mime_type_blacklist = {"audio/aac", "video/x-msvideo", "application/octet-stream", "application/x-csh", 
+                        "text/css", "text/csv", "application/msword", "image/gif", "text/calendar", 
+                        "image/jpeg", "text/javascript", "audio/mpeg", "video/mp4", "video/mpeg", 
+                        "image/png", "application/vnd.ms-powerpoint", "application/zip"}
 
 success_respose = {200, 201, 202, 203, 204, 205, 206, 207, 208, 226}
 # print("seed start")
@@ -158,26 +163,35 @@ def crawl_pages():
         except:
             pass
         if response.status_code in success_respose:
-            # content_length = response.headers['content-length'] not neccessarily present
-            content_length = len(response.content)
-            update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
-            get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time, content_length, response.status_code)
-            html_doc = response.text
-            soup = BeautifulSoup(html_doc, 'html.parser')
-            url_link_count = 0
-            for url_link in soup.find_all('a', href=True):
-                url_link_count += 1
-                if DEBUG:
-                    print("url link count is ", url_link_count)
-                abs_url = urljoin(curr_url, url_link['href'])
-                # normilize url
-                curr_url = url_normalize(abs_url)
-                domain_url = urlparse(curr_url).netloc
-                if domain_url in urls_visited:
-                    update_score(urls_visited, domain_url, 0.5, 0.5)
-                else:
-                    update_score(urls_visited, domain_url, 0.5, 0.5)
-                    urls.put(tuple((- urls_visited[domain_url][RANK_IDX], curr_url)))
+            # check the mime type of the content
+            try:
+                with urllib.request.urlopen(curr_url) as response_content:
+                    mime_type = response_content.info().get_content_type()
+                if mime_type in mime_type_blacklist: continue
+            except: continue
+            try:
+                # content_length = response.headers['content-length'] not neccessarily present
+                content_length = len(response.content)
+                update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
+                get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time, content_length, response.status_code)
+                html_doc = response.text
+                soup = BeautifulSoup(html_doc, 'html.parser')
+                url_link_count = 0
+                for url_link in soup.find_all('a', href=True):
+                    url_link_count += 1
+                    if DEBUG:
+                        print("url link count is ", url_link_count)
+                    abs_url = urljoin(curr_url, url_link['href'])
+                    # normilize url
+                    curr_url = url_normalize(abs_url)
+                    domain_url = urlparse(curr_url).netloc
+                    if domain_url in urls_visited:
+                        update_score(urls_visited, domain_url, 0.5, 0.5)
+                    else:
+                        update_score(urls_visited, domain_url, 0.5, 0.5)
+                        urls.put(tuple((- urls_visited[domain_url][RANK_IDX], curr_url)))
+            except:
+                print("Unable to parse ", curr_url)
         else:
             get_log(- 1, curr_url, - 1, curr_time, - 1, response.status_code, txt=False)
 
