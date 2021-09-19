@@ -148,25 +148,40 @@ def crawl_pages():
         if updated_rank != - curr_rank:
             urls.put(tuple((- updated_rank, curr_url)))
             continue
+        # try:
+        #     # response = requests.get(curr_url, timeout=10, headers=headers)
+        # except:
+        #     pass
         try:
-            response = requests.get(curr_url, timeout=10, headers=headers)
-        except:
-            pass
-        if response.status_code in success_respose:
+            response = urllib.request.urlopen(curr_url, timeout=10)
+        except: 
+            print("Unable to get a response from ", curr_url)
+            continue
+
+        if response.getcode() in success_respose:
             # checking the content mime type
+            mime_type = response.info().get_content_type()
+            if mime_type in mime_type_blacklist: continue
             # we are making a duplicate network request here 
             # we might want to eliminate requsts module and use urlib only instead 
+            # try:
+            #     with urllib.request.urlopen(curr_url) as response_content:
+            #         mime_type = response_content.info().get_content_type()
+            #     if mime_type in mime_type_blacklist: continue
+            # except: continue
             try:
-                with urllib.request.urlopen(curr_url) as response_content:
-                    mime_type = response_content.info().get_content_type()
-                if mime_type in mime_type_blacklist: continue
-            except: continue
-            try:
-                content_length = len(response.content)
+                # content_length = len(response.content)
+                # content_length = response.headers['content-length']
+                print("attempting to get the content length")
+                content = response.read()
+                content_length = len(content)
+                # content_length = response.read().__sizeof__()
+                print("content length", content_length)
                 update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
                 get_log(curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX],urls_visited[curr_url_domain][RANK_IDX], 
-                        content_length, response.status_code)
-                html_doc = response.text
+                        content_length, response.getcode())
+                # html_doc = response.text
+                html_doc = content.decode('utf-8')
                 soup = BeautifulSoup(html_doc, 'html.parser')
                 for url_link in soup.find_all('a', href=True):
                     if DEBUG:
@@ -185,7 +200,7 @@ def crawl_pages():
             except:
                 print("Unable to parse ", curr_url)
         else:
-            get_log(curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX], urls_visited[curr_url_domain][RANK_IDX], - 1, response.status_code, txt=False)
+            get_log(curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX], urls_visited[curr_url_domain][RANK_IDX], - 1, response.getcode(), txt=False)
 
 
 def main():
