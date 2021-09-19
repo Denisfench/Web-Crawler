@@ -100,20 +100,11 @@ def crawler_allowed(root_url, crawled_url):
     return False
 
 # time format is bad
-def get_log(count, url, novelty, importance, rank, curr_time, content_length, response_code, txt=False):
+def get_log(url, novelty, importance, rank, content_length, response_code):
     dt = datetime.now().strftime("%H:%M:%S")
-
-    if txt:
-        log_file = open("log_file.txt", "a")
-        content = ["url # ", str(count), "\n", "url ", str(url), "\n",
-                   "rank of visited url ", str(rank), "\n",
-                   "visited at ", str(curr_time)]
-        log_file.writelines(content)
-        log_file.close()
-    else:
-        data = {"url": url, "response code": response_code, "novelty score": novelty, "importance score": importance, "url_rank": rank, "visited_at": dt, "webpage_size": content_length}
-        df.loc[len(df.index)] = data
-        df.to_csv('log_file.csv', index=False)
+    data = {"url": url, "response code": response_code, "novelty score": novelty, "importance score": importance, "url_rank": rank, "visited_at": dt, "webpage_size": content_length}
+    df.loc[len(df.index)] = data
+    df.to_csv('log_file.csv', index=False)
 
 
 # ignore SSL certificate errors
@@ -122,36 +113,32 @@ ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
 
-# print("seed start")
-# for webpage in seed:
-#     print(webpage)
-# print("seed end")
-
 # need to add robot exclusion check to seed urls 
 for webpage in seed:
     if DEBUG:
         print(webpage)
-    urls.put((- 1, webpage))
     webpage_domain = urlparse(webpage).netloc
-    update_score(urls_visited, webpage_domain, 0.5, 0.5)
+    if crawler_allowed(webpage_domain, webpage):
+        urls.put((- 1, webpage))
+        update_score(urls_visited, webpage_domain, 0.5, 0.5)
 
-start_time = time.time()
-seconds = 10
-# has to be parallelized
-def crawl_pages():
+
+if DEBUG:
     count = 0
+    start_time = time.time()
+    seconds = 10
+
+
+def crawl_pages():
     while not urls.empty():
-        count += 1
-        curr_time = time.time()
-        print("visited count is ", count)
         if DEBUG:
-            print("visited count is ", count)
+            curr_time = time.time()
             if curr_time - start_time > seconds:
                 break
         curr_url = urls.get()
         curr_rank = curr_url[0]
         curr_url = curr_url[1]
-        print("curr url is ", curr_url)
+        print("currently crawling ", curr_url)
         curr_url_domain = urlparse(curr_url).netloc
         if not crawler_allowed(curr_url_domain, curr_url): continue
         updated_rank = urls_visited[curr_url_domain][RANK_IDX]
@@ -166,7 +153,7 @@ def crawl_pages():
         except:
             pass
         if response.status_code in success_respose:
-            # check the mime type of the content
+            # checking the content mime type
             # we are making a duplicate network request here 
             # we might want to eliminate requsts module and use urlib only instead 
             try:
@@ -175,20 +162,19 @@ def crawl_pages():
                 if mime_type in mime_type_blacklist: continue
             except: continue
             try:
-                # content_length = response.headers['content-length'] not neccessarily present
                 content_length = len(response.content)
                 update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
-                get_log(count, curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX],urls_visited[curr_url_domain][RANK_IDX], 
-                        curr_time, content_length, response.status_code)
+                get_log(curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX],urls_visited[curr_url_domain][RANK_IDX], 
+                        content_length, response.status_code)
                 html_doc = response.text
                 soup = BeautifulSoup(html_doc, 'html.parser')
-                url_link_count = 0
                 for url_link in soup.find_all('a', href=True):
-                    url_link_count += 1
                     if DEBUG:
+                        url_link_count = 0
+                        url_link_count += 1
                         print("url link count is ", url_link_count)
                     abs_url = urljoin(curr_url, url_link['href'])
-                    # normilize url
+                    # normilizing url
                     curr_url = url_normalize(abs_url)
                     domain_url = urlparse(curr_url).netloc
                     if domain_url in urls_visited:
@@ -199,7 +185,7 @@ def crawl_pages():
             except:
                 print("Unable to parse ", curr_url)
         else:
-            get_log(- 1, curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX], urls_visited[curr_url_domain][RANK_IDX], curr_time, - 1, response.status_code, txt=False)
+            get_log(curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX], urls_visited[curr_url_domain][RANK_IDX], - 1, response.status_code, txt=False)
 
 
 def main():
@@ -211,7 +197,6 @@ def main():
         thread.start()
     while threads:
         threads.pop().join()
-    # crawl_pages()
 
 if __name__ == "__main__":
     started = time.time()
