@@ -2,6 +2,7 @@ import urllib.request, urllib.parse, urllib.error
 import ssl
 import requests
 import time
+from datetime import datetime
 import pandas as pd
 from bs4 import BeautifulSoup
 from queue import PriorityQueue
@@ -47,7 +48,7 @@ success_respose = {200, 201, 202, 203, 204, 205, 206, 207, 208, 226}
 
 log = open("log_file.txt", "w")
 log.write("Beginning of the log file")
-df = pd.DataFrame(columns=["url", "url_rank", "visited_at", "webpage_size"])
+df = pd.DataFrame(columns=["url", "response code", "novelty score", "importance score", "url_rank", "visited_at", "webpage_size"])
 
 def print_urls():
     while not urls.empty():
@@ -99,7 +100,9 @@ def crawler_allowed(root_url, crawled_url):
     return False
 
 # time format is bad
-def get_log(count, url, rank, curr_time, content_length, response_code, txt=False):
+def get_log(count, url, novelty, importance, rank, curr_time, content_length, response_code, txt=False):
+    dt = datetime.now().strftime("%H:%M:%S")
+
     if txt:
         log_file = open("log_file.txt", "a")
         content = ["url # ", str(count), "\n", "url ", str(url), "\n",
@@ -108,7 +111,7 @@ def get_log(count, url, rank, curr_time, content_length, response_code, txt=Fals
         log_file.writelines(content)
         log_file.close()
     else:
-        data = {"url": url, "url_rank": rank, "visited_at": curr_time, "webpage_size": content_length}
+        data = {"url": url, "response code": response_code, "novelty score": novelty, "importance score": importance, "url_rank": rank, "visited_at": dt, "webpage_size": content_length}
         df.loc[len(df.index)] = data
         df.to_csv('log_file.csv', index=False)
 
@@ -164,6 +167,8 @@ def crawl_pages():
             pass
         if response.status_code in success_respose:
             # check the mime type of the content
+            # we are making a duplicate network request here 
+            # we might want to eliminate requsts module and use urlib only instead 
             try:
                 with urllib.request.urlopen(curr_url) as response_content:
                     mime_type = response_content.info().get_content_type()
@@ -173,7 +178,8 @@ def crawl_pages():
                 # content_length = response.headers['content-length'] not neccessarily present
                 content_length = len(response.content)
                 update_score(urls_visited, curr_url_domain, 0.5, 0.5, crawling=True, see_again=False)
-                get_log(count, curr_url, urls_visited[curr_url_domain][RANK_IDX], curr_time, content_length, response.status_code)
+                get_log(count, curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX],urls_visited[curr_url_domain][RANK_IDX], 
+                        curr_time, content_length, response.status_code)
                 html_doc = response.text
                 soup = BeautifulSoup(html_doc, 'html.parser')
                 url_link_count = 0
@@ -193,7 +199,7 @@ def crawl_pages():
             except:
                 print("Unable to parse ", curr_url)
         else:
-            get_log(- 1, curr_url, - 1, curr_time, - 1, response.status_code, txt=False)
+            get_log(- 1, curr_url, urls_visited[curr_url_domain][NOVELTY_IDX], urls_visited[curr_url_domain][IMPORTANCE_IDX], urls_visited[curr_url_domain][RANK_IDX], curr_time, - 1, response.status_code, txt=False)
 
 
 def main():
