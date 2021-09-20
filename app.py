@@ -25,7 +25,7 @@ NOVELTY_IDX = 2
 IMPORTANCE_IDX = 3
 DEBUG = False
 CRAWLER_NAME = "NYU_Crawler"
-THREAD_POOL_SIZE = 50
+THREAD_POOL_SIZE = 60
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
 
