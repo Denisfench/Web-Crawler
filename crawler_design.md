@@ -1,0 +1,79 @@
+**Web Crawler Design**
+
+- Firstly, we get the query string from the user
+- Then, we acquire 10 seed pages from the Google Search engine based on the query entered by the user. The number of seed pages to be acquired is a customizable parameter. 
+- Our next step is to define a dictionary containing the blacklist of mime types and the dictionary containing a set of possible success responses we can receive from a server. 
+- We create a Pandas Data Frame that serves as our log file for the crawled URLs and the data acquired from those URLs. 
+
+We keep track of the URLs that we've **visited** or **encountered** in a dictionary called **urls_visited**.
+
+We keep track of the order of the URLs to visit next in the priority queue called **URLs**. 
+
+**urls_visited** is designed as follows: 
+
+*Keys:* Domain URLs of the websites we crawl or encounter serve as keys in the dictionary. 
+
+*Values:* a *list* which consists of the following parameters: 
+
+\- **priority** (priority score or rank of the current webpage);
+
+\- **pages_crawled** (the number of pages we've already crawled from the website);
+
+\- **curr_novelty** (the novelty score of the webpage);
+
+\- **curr_importance** (the importance score of the webpage).
+
+**urls_visited** dictionary is updated by the **update_score** function.
+
+**update_score** function is designed as follows:
+
+*Parameters:* 
+
+- **urls_visited** dictionary. 
+- **domain_url** which is a domain URL of the website.
+- **novelty_weight** which is a customizable novelty weight. In our experiments, we've selected novelty weight to be 50 %.
+- **importance_weight** which is a customizable importance weight. In our experiments, we've selected importance weight to be 50 %.
+- **crawling** which is a flag indicating that we are crawling a page.
+- **see_again** which is a flag indicating that we've found a URL while parsing another website, but we aren't crawling this URL at this point. 
+- **The importance score corresponds to the number of pages we've encountered from a given website**
+- **The novelty score is calculated using the following formula: novelty = 1 / (pages_crawled + 1)**
+- **The priority score is calculated using the following formula: priority = novelty_weight \* new_novelty + importance_weight \* curr_importance** 
+
+1. The function first checks for the case when we encounter a URL for the first time, i.e. it hasn't been stored in our dictionary yet, and we are crawling this URL. In this case, we create an entry in the hash table with the domain URL of a given URL as a key, and initial values for the parameters such as novelty, importance, rank, etc. 
+2. Another case is when we encounter a URL for the first time, but we aren't crawling the URL. In this case, similarly to the case above, we are using domain URL as a key to our dictionary, and a list of initial values for the parameters. 
+3. A second scenario is when we've encountered a given URL before, i.e. it's stored in our dictionary, and we are either crawling a given URL, or we are parsing it from another webpage. In both of these cases, we update the values of the existing entry in our dictionary. 
+4. If we are crawling a URL, then its pages_crawled count will be updated which will change the given webpage's novelty score. If we've parsed a given URL from another webpage, then we'll update the importance of the root website of a given URL in our dictionary. 
+
+**The urls_visited dictionary contains the up to date information on the rank and other scores of every URL we ever encountered**
+
+Next, we are implementing a robot exclusion protocol within the boolean **crawler_allowed** function.
+
+*Parameters:*
+
+- **root_url** of the website we are currently crawling
+- **crawled_url** the actual URL we are currently crawling
+
+The crawler allowed function will find a *robots.txt* file if it exists and check whether our crawler is allowed on the given website. If the crawler is allowed, the function will return True, otherwise, it will return False. 
+
+The next function we've implemented is the **get_log** function. 
+
+The get_log function takes URL properties such as *URL name*, *importance score*, *the rank of a URL*, *size of the URL*, and a *response code* received back from the server. The function also gets the current timestamp. 
+
+Next, the function creates a data frame row and appends it to the existing data frame. 
+
+The core of our application is **the crawl_pages** function. 
+
+The function uses the BFS algorithm to traverse the web and is using auxiliary functions described above to decide on the best link to follow next.
+
+The algorithm within the **crawl_pages** function proceeds as follows: 
+
+1. Retrieve a URL from the **URLs** priority queue. 
+2. Check the robot exclusion protocol on the given webpage. If our crawler is not allowed to visit the webpage, don't crawl the given URL. If we are allowed to crawl the URL, try to request the webpage from the server. 
+3. We set a timeout of 5 seconds on getting a webpage from a web server. If we are unable to get the webpage within this time limit, we proceed to processing the next URL. 
+4. If we've gotten a response from the server, we check if the response code has one of the success codes. If it does, we parse the website. If not, we log the URL with whatever status code was returned to us to the log file and move on to the next URL. 
+5. When parsing a URL, we pass its properties to the **update_score()** function and then append the data about the given URL to the log file. 
+6. Our next step is to find all references to other URLs on the webpage, call **the update_score()** function on those URLs, and put them into a priority queue. 
+
+Our final part is **multithreading**. 
+
+We make our application maltreated by creating a customizable thread pool and setting each thread in a pool to execute our core **crawl_pages** function. We ensure thread safety by using thread-safe data structures, namely Python Priority Queue and Python Dictionary. These are the only data structures shared among the threads. In our experiments, we've discovered that the optimal number of threads on our machine is about 60. 
