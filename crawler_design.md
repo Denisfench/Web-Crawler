@@ -25,55 +25,59 @@ We keep track of the order of the URLs to visit next in the priority queue calle
 
 **urls_visited** dictionary is updated by the **update_score** function.
 
-**update_score** function is designed as follows:
+**update_score()** function is designed as follows:
 
 *Parameters:* 
 
 - **urls_visited** dictionary. 
 - **domain_url** which is a domain URL of the website.
-- **novelty_weight** which is a customizable novelty weight. In our experiments, we've selected novelty weight to be 50 %.
-- **importance_weight** which is a customizable importance weight. In our experiments, we've selected importance weight to be 50 %.
-- **crawling** which is a flag indicating that we are crawling a page.
-- **see_again** which is a flag indicating that we've found a URL while parsing another website, but we aren't crawling this URL at this point. 
-- **The importance score corresponds to the number of pages we've encountered from a given website**
-- **The novelty score is calculated using the following formula: novelty = 1 / (pages_crawled + 1)**
-- **The priority score is calculated using the following formula: priority = novelty_weight \* new_novelty + importance_weight \* curr_importance** 
+- **novelty_weight** which is a customizable novelty weight. In our experiments, we've selected the novelty weight to be 50 %.
+- **importance_weight** which is a customizable importance weight. In our experiments, we've selected the importance weight to be 50 %.
+- **crawling** is a flag indicating that we are crawling a page.
+- **see_again** is a flag indicating that we've found a URL while parsing another webpage, but we aren't crawling the given URL at this point. 
+- **The importance score corresponds to the number of pages we've encountered from a given website.**
+- **The novelty score is calculated using the following formula: novelty = 1 / (pages_crawled + 1).**
+- **The priority score is calculated using the following formula: priority = novelty_weight \* new_novelty + importance_weight \* curr_importance.** 
 
-1. The function first checks for the case when we encounter a URL for the first time, i.e. it hasn't been stored in our dictionary yet, and we are crawling this URL. In this case, we create an entry in the hash table with the domain URL of a given URL as a key, and initial values for the parameters such as novelty, importance, rank, etc. 
-2. Another case is when we encounter a URL for the first time, but we aren't crawling the URL. In this case, similarly to the case above, we are using domain URL as a key to our dictionary, and a list of initial values for the parameters. 
-3. A second scenario is when we've encountered a given URL before, i.e. it's stored in our dictionary, and we are either crawling a given URL, or we are parsing it from another webpage. In both of these cases, we update the values of the existing entry in our dictionary. 
-4. If we are crawling a URL, then its pages_crawled count will be updated which will change the given webpage's novelty score. If we've parsed a given URL from another webpage, then we'll update the importance of the root website of a given URL in our dictionary. 
+1. The function first checks the case when we encounter a URL for the first time, i.e. it hasn't been stored in our dictionary yet, and we are crawling the given URL. In this case, we create an entry in the hash table with the domain URL of a given URL as a key, and initial parameters such as novelty, importance, rank, etc. as values.
+2. Another case is when we encounter a URL for the first time, but we aren't crawling the URL. In this case, similarly to the case above, we are using domain URL as a key to our dictionary, and a list of initial parameters as the value. 
+3. A second scenario is when we've encountered a URL before, i.e. it's already stored in our dictionary, and we are either crawling a given URL, or are parsing it from another webpage. In both cases, we update the values of the existing entry in our dictionary. 
+4. If we are crawling a URL, then its pages_crawled count will be updated, which will change the given webpage's novelty score. If we've parsed a given URL from another webpage, then we'll update the importance of the domain URL of the current webpage. 
 
 **The urls_visited dictionary contains the up to date information on the rank and other scores of every URL we ever encountered**
 
-Next, we are implementing a robot exclusion protocol within the boolean **crawler_allowed** function.
+Next, we are implementing a robot exclusion protocol with the **crawler_allowed()** function.
+
+*Note: we subclass the RobotFileParser class in order to decrease the timeout value for retrieving a robots.txt file. The default timeout is set to 60 seconds. The idea is borrowed from the following StackOverflow post: https://stackoverflow.com/questions/15235374/python-robotparser-timeout-equivalent.*
 
 *Parameters:*
 
 - **root_url** of the website we are currently crawling
 - **crawled_url** the actual URL we are currently crawling
 
-The crawler allowed function will find a *robots.txt* file if it exists and check whether our crawler is allowed on the given website. If the crawler is allowed, the function will return True, otherwise, it will return False. 
+The crawler allowed function will find a *robots.txt* file, if it exists, and check whether our crawler is allowed on the given website. If the crawler is allowed, the function will return True, otherwise, it will return False. 
 
-The next function we've implemented is the **get_log** function. 
+The next function we've implemented is the **get_log()** function. 
 
-The get_log function takes URL properties such as *URL name*, *importance score*, *the rank of a URL*, *size of the URL*, and a *response code* received back from the server. The function also gets the current timestamp. 
+The get_log function takes URL properties such as *URL name*, *importance score*, *the rank of a URL*, *size of the URL*, and a *response code* received back from the server. 
 
-Next, the function creates a data frame row and appends it to the existing data frame. 
+The function acquires the current timestamp from the Python time module. 
 
-The core of our application is **the crawl_pages** function. 
+Next, the function creates a DataFrame row and appends it to the existing data frame. 
 
-The function uses the BFS algorithm to traverse the web and is using auxiliary functions described above to decide on the best link to follow next.
+The core of our application is **the crawl_pages()** function. 
 
-The algorithm within the **crawl_pages** function proceeds as follows: 
+The function uses a modified version of BFS algorithm to traverse the web and is using auxiliary functions described above to decide on the best link to follow next.
 
-1. Retrieve a URL from the **URLs** priority queue. 
-2. Check the robot exclusion protocol on the given webpage. If our crawler is not allowed to visit the webpage, don't crawl the given URL. If we are allowed to crawl the URL, try to request the webpage from the server. 
-3. We set a timeout of 5 seconds on getting a webpage from a web server. If we are unable to get the webpage within this time limit, we proceed to processing the next URL. 
-4. If we've gotten a response from the server, we check if the response code has one of the success codes. If it does, we parse the website. If not, we log the URL with whatever status code was returned to us to the log file and move on to the next URL. 
-5. When parsing a URL, we pass its properties to the **update_score()** function and then append the data about the given URL to the log file. 
-6. Our next step is to find all references to other URLs on the webpage, call **the update_score()** function on those URLs, and put them into a priority queue. 
+The algorithm within the **crawl_pages()** function proceeds as follows: 
+
+1. Retrieve a URL from the **urls** priority queue. 
+2. Check the robot exclusion protocol on the given webpage. If our crawler is not allowed to visit the webpage, don't crawl a given URL. If we are allowed to crawl, we try to request the webpage from the server. 
+3. We set a timeout value to 5 seconds on getting a webpage from a web server. If we are unable to get the webpage within this time limit, we proceed to processing the next URL. 
+4. If we've gotten a response from the server, we check whether the response code is in our success codes list. If it is, we parse the website. If not, we log the URL with whatever status code was returned to us and move on to the next URL. 
+5. When parsing a URL, we pass its properties to the **update_score()** function and then append the data about the given URL to the csv log file. 
+6. Our next step is to find all references to other URLs on the webpage using Beautiful Soup library and call **update_score()** function on those URLs, before putting them in the priority queue. 
 
 Our final part is **multithreading**. 
 
-We make our application maltreated by creating a customizable thread pool and setting each thread in a pool to execute our core **crawl_pages** function. We ensure thread safety by using thread-safe data structures, namely Python Priority Queue and Python Dictionary. These are the only data structures shared among the threads. In our experiments, we've discovered that the optimal number of threads on our machine is about 60. 
+We make our application multithreaded by creating a customizable thread pool and setting each thread in a pool to execute our core **crawl_pages()** function. We ensure thread safety by using thread-safe data structures, namely Python Priority Queue and Python Dictionary. These are the only data structures shared among the threads. In our experiments, we've discovered that the optimal number of threads for our machine is about 60. 
